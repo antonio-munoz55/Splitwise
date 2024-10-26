@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script type="module" src="./src/js/script.js" defer></script>
+    <title>Splitwise</title>
+</head>
+<body>
+    <main>
+      <div class="top">
+        <h1>Splitwise</h1>
+      </div>
+
+        <!-- Home Page -->
+        <div id="home" class="page active">
+          <h2>Home</h2>
+          <div class="homeContainer">
+            <button class="addExpense" onclick="displayPage('addAnExpense')">+</button>
+            <div class="expenseList">
+            </div>
+            <div class="buttons">
+              <button onclick="displayPage('users')">Users</button>
+              <button onclick="displayPage('balances')">Balances</button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Users Page -->
+        <div id="users" class="page">
+          <h2>Users</h2>
+          <div class="usersContainer">
+            <!-- List of users -->
+            <div class="usersList">
+            </div>
+            <div class="buttons">
+              <button onclick="displayPage('home')">Home</button>
+              <button onclick="displayPage('addUser')">Add user</button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Add User Page -->
+        <div id="addUser" class="page">
+          <h2>Add user</h2>
+          <form id="myForm">
+            <!-- Input for the user's name -->
+            <label for="name">Name</label>
+            <input type="text" id="name" name="username"><br>
+
+            <!-- Section to choose the user’s gender -->
+            <p>Genre</p>
+            <div class="genres">
+              <input type="radio" id="female" name="genre" value="female">
+              <label for="female">Female<i class='bx bx-female-sign'></i></label>
+              <input type="radio" id="male" name="genre" value="male">
+              <label for="male">Male<i class='bx bx-male-sign'></i></label>
+            </div>
+            
+            <!-- Section to choose the user’s icon -->
+            <div class="icons">
+              <input type="radio" id="icon1" name="icon" value="male1">
+              <label for="icon1">
+                <img src="./src/img/male1.png" alt="">
+              </label>
+
+              <input type="radio" id="icon2" name="icon" value="male2">
+              <label for="icon2">
+                <img src="./src/img/male2.png" alt="">
+              </label>
+
+              <input type="radio" id="icon3" name="icon" value="female1">
+              <label for="icon3">
+                <img src="./src/img/female1.png" alt="">
+              </label>
+
+              <input type="radio" id="icon4" name="icon" value="female2">
+              <label for="icon4">
+                <img src="./src/img/female2.png" alt="">
+              </label>
+            </div>
+
+            <div class="buttons">
+              <button type="submit">Confirm</button>
+              <button type="button" onclick="displayPage('users')">Back</button>
+            </div>
+          </form>
+        </div>
+    
+        <!-- Balances Page -->
+        <div id="balances" class="page">
+          <h2>Balances</h2>
+          <div class="balancesContainer">
+            <!-- List of balances between users -->
+            <div class="balancesList">
+            </div>
+            <div class="buttons">
+              <button onclick="displayPage('home')">Home</button>
+              <button type="button" id="settleUp">Settle up</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add an Expense Page -->
+        <div id="addAnExpense" class="page">
+          <h2>Add an expense</h2>
+          <form id="myForm2">
+            <!-- User selection for the expense -->
+            <div class="selectUser">
+              <img class="selectedUserIcon" src="./src/img/iconDefault.png" alt="">
+              <label for="userOptions">User:</label>
+              <select id="userOptions" name="userOptions">
+                <option value="-" selected disabled>-- Select a user --</option>
+              </select>
+            </div>
+
+            <!-- Input for the amount of the expense -->
+            <div class="amountExpense">
+              <img class="expenseIcon" src="./src/img/moneyBag.png" alt="">
+              <label for="amount">Amount:</label>
+              <input type="text" id="amount" name="amount">
+            </div>
+
+            <!-- Input for the title or description of the expense -->
+            <div class="titleExpense">
+              <img class="titleExpenseIcon" src="./src/img/boot.png" alt="">
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="title">
+            </div>
+            <div class="buttons">
+              <button type="button" onclick="displayPage('home')">Home</button>
+              <button type="submit">Confirm</button>
+            </div>
+          </form>
+        </div>
+      </main>
+</body>
+</html>

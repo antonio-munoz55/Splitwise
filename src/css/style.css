@@ -1,0 +1,227 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  /* Page background */
+  background-image: url(../img/backgroundPage.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main{
+  border: 1px solid black;
+  padding: 8px;
+  border-radius: 8px;
+  width: 400px;
+  height: 700px;
+  box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.5);
+  background-color: white;
+}
+
+.top{
+  background-image: url(../img/topBackImage.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 20%;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top h1{
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+#addUser,
+#addAnExpense,
+#home,
+#balances{
+  height: 80%;
+}
+
+h2{
+  background-color: #660000;
+  color: white;
+  position: relative;
+  transform: translate(14px, -14px);
+  width: 50%;
+  text-align: center;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.page{
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
+#myForm,
+#myForm2{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.genres{
+  margin: 8px;
+}
+
+.genres input[type="radio"]{
+  display: none;
+}
+
+.genres input[type="radio"]:hover + label{
+  border: 2px solid grey;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+
+.genres input[type="radio"]:checked + label{
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 4px;
+}
+.icons img{
+  width: 80px;
+  border-radius: 50%;
+}
+
+.icons input[type="radio"]{
+  display: none;
+}
+
+.icons input[type="radio"]:hover + label img{
+  border: 2px solid gray;
+}
+
+.icons input[type="radio"]:checked + label img{
+  border: 2px solid black;
+}
+
+#users{
+  height: 80%;
+}
+
+.usersContainer,
+.homeContainer,
+.balancesContainer{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.userContainer,
+.expenseContainer,
+.balanceContainer{
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  padding: 8px;
+  margin: 5px 0;
+}
+
+.usersList,
+.expenseList,
+.balancesList{
+  height: 90%;
+  overflow: auto;
+}
+
+.userIcon,
+.selectedUserIcon,
+.balanceUserIcon{
+  width: 80px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.expenseIcon,
+.titleExpenseIcon{
+  width: 80px;
+  aspect-ratio: 1;
+}
+
+.deleteUser{
+  border-radius: 50%;
+}
+
+#home{
+  height: 80%;
+}
+
+.homeContainer{
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.addExpense{
+  align-self: flex-end;
+  border-radius: 50%;
+}
+
+.selectUser,
+.amountExpense,
+.titleExpense{
+  display: flex;
+  align-items: center;
+}
+
+#myForm2 label{
+  padding-right: 8px;
+  padding-left: 12px;
+}
+
+button{
+  font-size: 20px;
+  color: #fff;
+  background-color: #8B0000;
+  border: 3px solid #000;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  box-shadow: 0px 4px 0px #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+button:hover{
+  background-color: #A52A2A;
+  box-shadow: 0px 6px 0px #000;
+  transform: translateY(-2px);
+}
+
+button:active{
+  background-color: #660000;
+  box-shadow: 0px 2px 0px #000;
+  transform: translateY(2px);
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+}
